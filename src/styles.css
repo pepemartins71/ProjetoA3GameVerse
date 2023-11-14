@@ -1,0 +1,214 @@
+body {
+    background-image: linear-gradient(#878787, rgb(73, 71, 71));
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*Navigation Bar*/
+
+.navbar {
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.navBar {
+    background: #1A456C;
+}
+
+/*Games*/
+
+#game {
+    margin-left: 120px;
+}
+
+.gameImg {
+    width: 262px;
+    height: 142.391px;
+}
+
+.gameCard {
+    background: #D6DAD6;
+    text-align: center;
+    width: 290px;
+    height: 392px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.gameTitle {
+    margin-top: 16px;
+}
+
+.gameText {
+    width: 215px;
+    margin-left: 35px;
+}
+
+.categoryImg {
+    width: 25px;
+    padding-bottom: 5px;
+}
+
+/*Login Section*/
+
+#login {
+    padding: 100px;
+}
+
+#esqueceuSenha {
+    padding: 100px;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.loginCard {
+    width: 500px;
+    height: 400px;
+    background: rgba(214, 218, 214, 0.50);
+}
+
+.login-info {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.login-button {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.codigoCard {
+    width: 500px;
+    height: 502px;
+    background: rgba(214, 218, 214, 0.50);
+}
+
+/*Cadastro Section*/
+
+#cadastro {
+    padding: 100px;
+}
+
+.cadastro-title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.cadastroCard {
+    width: 500px;
+    height: 725px;
+    background: #D6DAD6;
+}
+
+.cadastro-info {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.cadastro-button {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/*Suporte Section*/
+
+#Suporte {
+    padding: 100px;
+}
+
+.Suporte-title {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.SuporteCard {
+    width: 800px;
+    height: 600px;
+    background: rgba(214, 218, 214, 0.50);
+    background-image: linear-gradient(rgba(214, 218, 214, 0.50), rgb(136, 136, 136));
+    font-size: 18px;
+    font-style: italic;
+}
+
+.Suporte-info {
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+.Suporte-button {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.col-sup {
+    flex: 0 0 auto;
+    width: auto;
+    border-radius: 12px;
+}
+
+.sup-cont {
+    display: grid;
+    align-items: center;
+}
+
+.sup-cont label {
+    flex: 1;
+    text-align: left;
+    padding-right: 10px;
+    /* Ajuste o espaçamento conforme necessário */
+}
+
+.sup-cont select {
+    flex: 1;
+}
+
+.card-body {
+    display: inline-block;
+    /* Faz com que os elementos apareçam na mesma linha */
+    margin-right: 20px;
+    /* Espaçamento entre as caixas de seleção e o campo de texto */
+}
+
+#text-input {
+    display: none;
+    vertical-align: top;
+    /* Alinha o campo de texto ao topo das caixas de seleção */
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GameVerse</title>
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap Javascript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="perfilStyles.css">
+    <!-- JS Code -->
+    <script src=""></script>
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/1c7c4b8991.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navBar">
+        <div class="container">
+            <a class="navbar-brand" href="usuario.html"><img src="images/GameVerse_logo.png" alt="GameVerseLogo"
+                    width="100" height="100">GameVerse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample07">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuario.html">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Loja</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="listaDesejos">Lista de Desejos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="categorias">Categorias</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="novidades">Novidades</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="suporte.html">Suporte</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav sm-icons">
+                    <li class="nav-item dropdown">
+                      <a id="username" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle icon"></i> Usuário</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="perfil.html" id="perfil">Perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="configuracoes.html" id="configuracoes">Configurações</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="index.html" id="logout" onclick="logout()">Sair</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="default">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2" style="padding-top: 12px; padding-bottom: 12px;">
+                    <div class="configList">
+                        <!-- <div class="divisãoHorizontal">
+                            <a href="#" id="linkGeral"><h4>Geral</h4></a>
+                        </div> -->
+                        <div class="divisãoHorizontal">
+                            <a href="#" id="linkConta"><h4>Conta</h4></a>
+                        </div>
+                        <div class="divisãoHorizontal">
+                            <a href="#" id="linkAudio"><h4>Áudio</h4></a>
+                        </div>
+                        <div style="margin-top: 450px;"></div>
+                        <div style="text-align: center;">
+                            <a href="suporte.html"><h6>Precisa de ajuda?</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10" style="padding-top: 12px; padding-bottom: 12px;">
+                    <div class="configGeral">
+                        <div class="row">
+                            <div class="divisãoHorizontal">
+                                <h4>Geral</h4>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 30px; margin-bottom: 70px;">
+                            <h2>Privacidade</h2>
+                            <div>
+                                <input type="checkbox" id="Público"> Público
+                                <input type="checkbox" id="Privado" style="margin-left: 20px;"> Privado
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 30px; margin-bottom: 70px;">
+                            <h2>Notificações</h2>
+                            <div>
+                                <input type="checkbox" id="Ligado"> Ligado
+                                <input type="checkbox" id="Desligado" style="margin-left: 20px;"> Desligado
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 30px; margin-bottom: 70px;">
+                            <h2>Versão</h2>
+                            <div>
+                                <h6 style="padding-left: 30px;">1.0.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="config">
+        <template id="geral">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2" style="padding-top: 12px; padding-bottom: 12px;">
+                        <div class="configList">
+                            <!-- <div class="divisãoHorizontal">
+                                <a href="#" id="linkGeral"><h4>Geral</h4></a>
+                            </div> -->
+                            <div class="divisãoHorizontal">
+                                <a href="#" id="linkConta"><h4>Conta</h4></a>
+                            </div>
+                            <div class="divisãoHorizontal">
+                                <a href="#" id="linkAudio"><h4>Áudio</h4></a>
+                            </div>
+                            <div style="margin-top: 400px;"></div>
+                            <div style="text-align: center;">
+                                <a href="suporte.html"><h6>Precisa de ajuda?</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10" style="padding-top: 12px; padding-bottom: 12px;">
+                        <div class="configGeral">
+                            <div class="row">
+                                <div class="divisãoHorizontal">
+                                    <h4>Geral</h4>
+                                </div>
+                            </div>
+                            <div class="row" style="padding-left: 30px; margin-bottom: 70px;">
+                                <h2>Privacidade</h2>
+                                <div>
+                                    <input type="checkbox" id="Público"> Público
+                                    <input type="checkbox" id="Privado" style="margin-left: 20px;"> Privado
+                                </div>
+                            </div>
+                            <div class="row" style="padding-left: 30px; margin-bottom: 70px;">
+                                <h2>Notificações</h2>
+                                <div>
+                                    <input type="checkbox" id="Ligado"> Ligado
+                                    <input type="checkbox" id="Desligado" style="margin-left: 20px;"> Desligado
+                                </div>
+                            </div>
+                            <div class="row" style="padding-left: 30px; margin-bottom: 70px;">
+                                <h2>Versão</h2>
+                                <div>
+                                    <h6 style="padding-left: 30px;">1.0.0</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template id="conta">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2" style="padding-top: 12px; padding-bottom: 12px;">
+                        <div class="configList">
+                            <div class="divisãoHorizontal">
+                                <a href="configuracoes.html" id="voltar"><h4>Voltar</h4></a>
+                            </div>
+                            <div style="margin-top: 495px;"></div>
+                            <div style="text-align: center;">
+                                <a href="suporte.html"><h6>Precisa de ajuda?</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10" style="padding-top: 12px; padding-bottom: 12px;">
+                        <div class="configGeral">
+                            <div class="row">
+                                <div class="divisãoHorizontal">
+                                    <h4>Conta</h4>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="form-group">
+                                    <label for="nome">Nome:</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" name="nome" id="nome" readonly>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="sobrenome">Sobrenome:</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" name="sobrenome" id="sobrenome" readonly>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="genero">Gênero:</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" name="genero" id="genero" readonly>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="dataNascimento">Data de Nascimento:</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" readonly>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="cadastroEmail">E-mail:</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" name="cadastroEmail" id="cadastroEmail" readonly>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="cadastroSenha">Senha:</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" name="cadastroSenha" id="cadastroSenha" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template id="audio">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2" style="padding-top: 12px; padding-bottom: 12px;">
+                        <div class="configList">
+                            <div class="divisãoHorizontal">
+                                <a href="configuracoes.html" id="voltar"><h4>Voltar</h4></a>
+                            </div>
+                            <div style="margin-top: 495px;"></div>
+                            <div style="text-align: center;">
+                                <a href="suporte.html"><h6>Precisa de ajuda?</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10" style="padding-top: 12px; padding-bottom: 12px;">
+                        <div class="configGeral">
+                            <div class="row">
+                                <div class="divisãoHorizontal">
+                                    <h4>Áudio</h4>
+                                </div>
+                            </div>
+                            <div id="audioOpts" class="container">
+                                <div style="margin-bottom: 70px;">
+                                    <h4>Viva-voz</h4>
+                                    <select name="vivaVoz" id="vivaVoz">
+                                        <option value=""></option>
+                                        <option value="">Fones de ouvido / Auto falantes (Realtek(R) Audio)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <h4>Tipo de transmissão</h4>
+                                    <div>
+                                        <input type="checkbox" id="pressToTalk"> Pressionar para falar
+                                        <input type="checkbox" id="openMic" style="margin-left: 20px;"> Microfone aberto
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </section>
+</body>
+<script>
+    localStorage.setItem("isLoggedIn", "true");
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtenha o nome e sobrenome do usuário do localStorage
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (isLoggedIn) {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const nome = currentUser.nome;
+        const sobrenome = currentUser.sobrenome;
+
+        // Atualize o texto do link "Usuário" para exibir o nome e sobrenome
+        const linkUsuario = document.getElementById('username');
+        linkUsuario.innerHTML = `<i class="bi bi-person-circle icon"></i> ${nome} ${sobrenome}`;
+        }
+    });
+
+    function logout() {
+        localStorage.setItem("isLoggedIn", "false");
+    }
+
+    function redirecionarTemplate(tipo) {
+        var url = "configuracoes.html"; // URL comum para redirecionar
+
+        // Adicionar o tipo de página à URL (geral, conta, audio)
+        url += "?tipo=" + tipo;
+        window.location.href = url; // Redirecionar para a página com base no tipo
+    }
+
+    // document.getElementById("linkGeral").addEventListener("click", function () {
+    //     redirecionarTemplate("geral");
+    // });
+
+    document.getElementById("linkConta").addEventListener("click", function () {
+        redirecionarTemplate("conta");
+    });
+
+    document.getElementById("linkAudio").addEventListener("click", function () {
+        redirecionarTemplate("audio");
+    });
+
+    window.addEventListener("load", function () {
+        // Verifique se a URL tem o parâmetro ?tipo=(geral, conta, audio)
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipo = urlParams.get("tipo");
+        const configSection = document.getElementById("config");
+        const defaultSection = document.getElementById("default");
+
+        // Oculta a seção de default se o tipo for "geral"
+        // if (tipo === "geral") {
+        //     const geralTemplate = document.getElementById("geral").content;
+        //     const clone = document.importNode(geralTemplate, true);
+        //     configSection.appendChild(clone);
+        //     defaultSection.style.display = "none";  // Oculta a seção de default
+        // }
+        // Oculta a seção de default se o tipo for "conta"
+        if (tipo === "conta") {
+            const contaTemplate = document.getElementById("conta").content;
+            const clone = document.importNode(contaTemplate, true);
+            configSection.appendChild(clone);
+            defaultSection.style.display = "none";  // Oculta a seção de default
+        }
+        if (tipo === "audio") {
+            const audioTemplate = document.getElementById("audio").content;
+            const clone = document.importNode(audioTemplate, true);
+            configSection.appendChild(clone);
+            defaultSection.style.display = "none";  // Oculta a seção de default
+        }
+    });
+
+    window.addEventListener("load", function () {
+        // Verificar se o usuário está logado
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        if (isLoggedIn === "true") {
+            // O usuário está logado, continue
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+            // Preencher os campos de input com os dados do usuário
+            document.getElementById('nome').value = currentUser.nome;
+            document.getElementById('sobrenome').value = currentUser.sobrenome;
+            document.getElementById('genero').value = currentUser.genero;
+            document.getElementById('dataNascimento').value = currentUser.dataNascimento;
+            document.getElementById('cadastroEmail').value = currentUser.cadastroEmail;
+            document.getElementById('cadastroSenha').value = currentUser.cadastroSenha;
+
+            // Tornar os campos de input não editáveis
+            document.getElementById('nome').readOnly = true;
+            document.getElementById('sobrenome').readOnly = true;
+            document.getElementById('genero').readOnly = true;
+            document.getElementById('dataNascimento').readOnly = true;
+            document.getElementById('cadastroEmail').readOnly = true;
+            document.getElementById('cadastroSenha').readOnly = true;
+        }
+    });
+
+    // Função para redirecionar com base no item clicado
+    function redirecionarParaLoja(tipo) {
+        var url = "loja.html"; // URL comum para redirecionar
+
+        // Adicionar o tipo de página à URL (listaDesejos, categorias, novidades)
+        url += "?tipo=" + tipo;
+        window.location.href = url; // Redirecionar para a página com base no tipo
+    }
+
+    // Event listener para os itens do menu
+    document.getElementById("listaDesejos").addEventListener("click", function () {
+        redirecionarParaLoja("listaDesejos");
+    });
+
+    document.getElementById("categorias").addEventListener("click", function () {
+        redirecionarParaLoja("categorias");
+    });
+
+    document.getElementById("novidades").addEventListener("click", function () {
+        redirecionarParaLoja("novidades");
+    });
+</script>
+
+</html>

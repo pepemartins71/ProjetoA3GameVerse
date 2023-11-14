@@ -1,0 +1,139 @@
+body {
+    background-image: linear-gradient(#878787, rgb(73, 71, 71));
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.divisãoHorizontal {
+    border-bottom: 2px solid #000;
+    margin: 10px 0;
+    opacity: 0.5;
+}
+
+/*Navigation Bar*/
+
+.navbar {
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.navBar {
+    background: #1A456C;
+}
+
+/*Lista de Desejos*/
+
+#gamePics {
+    width: 623px;
+    height: 425px;
+    position: relative;
+    left: 60px;
+}
+
+#jogoImagem {
+    width: 100%;
+    height: 338px;
+    object-fit: cover;
+    /* Redimensiona a imagem para cobrir todo o espaço */
+}
+
+.columnLeft {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 0px;
+}
+
+.aboutGame {
+    width: 623px;
+    height: 338px;
+    background-color: #D6DAD6;
+    padding: 50px 20px 50px 20px;
+}
+
+.columnRight {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 0px;
+}
+
+/*Categorias*/
+
+.categoriasJogo {
+    width: 300px;
+    height: 575px;
+    background-color: #D6DAD6;
+}
+
+.categoriasTitulo {
+    text-align: center;
+    padding-top: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.categoriaAdiciona {
+    max-height: 410px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.jogosFiltrados {
+    max-height: 575px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 12px;
+    margin-top: 12px;
+}
+
+.jogo {
+    display: none;
+}
+
+/*Novidades*/
+
+#newGamePics {
+    width: 623px;
+    height: 425px;
+    position: relative;
+    left: 55px;
+}
+
+.novidadeTitulo {
+    text-align: center;
+    background-color: #D6DAD6;
+    margin: auto;
+    width: 80%;
+}
+
+.newGame {
+    width: 492px;
+    height: 338px;
+    background-color: #D6DAD6;
+    padding: 20px 50px 50px 50px;
+    margin-left: 50px;
+}

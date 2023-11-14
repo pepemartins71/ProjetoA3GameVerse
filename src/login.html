@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap Javascript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JS Code -->
+    <script src="login.js"></script>
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/1c7c4b8991.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navBar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/GameVerse_logo.png" alt="GameVerseLogo"
+                    width="100" height="100">GameVerse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample07">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Loja</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="categorias">Categorias</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="novidades">Novidades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suporte.html">Suporte</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav sm-icons">
+                    <li><a class="nav-link" href="login.html"><i class="bi bi-person-circle icon"></i> Login</a></li>
+                    <li><a class="nav-link" href="cadastro.html"><i class="bi bi-pencil-square"></i> Cadastro</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="login">
+        <div class="row">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <div class="card loginCard">
+                    <div class="card-header">
+                        <h3 class="login-title">Login</h3>
+                    </div>
+                    <div class="card-body" style="margin-right: 0px;">
+                        <form id="loginForm">
+                            <div class="container">
+                                <label class="login-info" for="loginEmail">E-mail</label>
+                                <br>
+                                <input class="col-12" type="email" name="loginEmail" id="loginEmail">
+                                <br>
+                                <label class="login-info" for="loginSenha">Senha</label>
+                                <br>
+                                <input class="col-12" type="password" name="loginSenha" id="loginSenha">
+                                <br>
+                                <a href="#" id="esqueceuSenhaLink">Esqueceu a senha?</a>
+                            </div>
+                            <div class="container login-button">
+                                <button style="width: 334px;" type="button" class="btn btn-lg btn-warning" onclick="loginUsuario()">Entrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="esqueceuSenha">
+        <template id="codigo">
+            <div class="row">
+                <div class="d-flex flex-wrap align-items-center justify-content-center">
+                    <div class="card codigoCard">
+                        <div class="card-header">
+                            <h3 class="login-title">Recuperar Senha</h3>
+                        </div>
+                        <div class="card-body" style="margin-right: 0px;">
+                            <form id="codigoForm">
+                                <div class="container">
+                                    <label class="login-info" for="senhaEmail">E-mail</label>
+                                    <br>
+                                    <input class="col-12" type="email" name="senhaEmail" id="senhaEmail">
+                                </div>
+                                <div class="container login-button">
+                                    <button style="width: 334px;" type="button" class="btn btn-lg btn-warning" onclick="enviarCodigo()">Enviar Código</button>
+                                </div>
+                                <br>
+                                <div class="container">
+                                    <label class="login-info" for="senhaCodigo">Código</label>
+                                    <br>
+                                    <input class="col-12" type="text" name="senhaCodigo" id="senhaCodigo">
+                                </div>
+                                <div class="container login-button">
+                                    <button style="width: 334px;" type="button" class="btn btn-lg btn-warning" onclick="validarCodigo()">Validar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template id="novaSenha">
+            <div class="row">
+                <div class="d-flex flex-wrap align-items-center justify-content-center">
+                    <div class="card loginCard">
+                        <div class="card-header">
+                            <h3 class="login-title">Recuperar Senha</h3>
+                        </div>
+                        <div class="card-body" style="margin-right: 0px;">
+                            <form id="novaSenhaForm">
+                                <div class="container">
+                                    <label class="login-info" for="NovaSenha">Nova Senha</label>
+                                    <br>
+                                    <input class="col-12" type="text" name="NovaSenha" id="NovaSenha">
+                                    <br>
+                                    <label class="login-info" for="confirmarSenha">Confirmar Senha</label>
+                                    <br>
+                                    <input class="col-12" type="text" name="confirmarSenha" id="confirmarSenha">
+                                </div>
+                                <div class="container login-button">
+                                    <button style="width: 334px;" type="button" class="btn btn-lg btn-warning" onclick="validarSenhas()">Validar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </section>
+</body>
+<script>
+    function redirecionarEsqueceuSenha(tipo) {
+        var url = "login.html"; // URL comum para redirecionar
+
+        // Adicionar o tipo de página à URL (esqueceuSenhaCodigo, esqueceuSenhaNovaSenha)
+        url += "?tipo=" + tipo;
+        window.location.href = url; // Redirecionar para a página com base no tipo
+    }
+
+    document.getElementById("esqueceuSenhaLink").addEventListener("click", function () {
+        redirecionarEsqueceuSenha("esqueceuSenhaCodigo");
+    });
+
+    window.addEventListener("load", function () {
+        // Verifique se a URL tem o parâmetro ?tipo=esqueceuSenhaCodigo
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipo = urlParams.get("tipo");
+        const esqueceuSenhaSection = document.getElementById("esqueceuSenha");
+        const loginSection = document.getElementById("login");
+
+        // Oculta a seção de login se o tipo for "esqueceuSenhaCodigo"
+        if (tipo === "esqueceuSenhaCodigo") {
+            const codigoTemplate = document.getElementById("codigo").content;
+            const clone = document.importNode(codigoTemplate, true);
+            esqueceuSenhaSection.appendChild(clone);
+            loginSection.style.display = "none";  // Oculta a seção de login
+        }
+        // Oculta a seção de login se o tipo for "esqueceuSenhaNovaSenha"
+        if (tipo === "esqueceuSenhaNovaSenha") {
+            const novaSenhaTemplate = document.getElementById("novaSenha").content;
+            const clone = document.importNode(novaSenhaTemplate, true);
+            esqueceuSenhaSection.appendChild(clone);
+            loginSection.style.display = "none";  // Oculta a seção de login
+        }
+    });
+
+    // Função para redirecionar com base no item clicado
+    function redirecionarParaLoja(tipo) {
+        var url = "loja.html"; // URL comum para redirecionar
+
+        // Adicionar o tipo de página à URL (listaDesejos, categorias, novidades)
+        url += "?tipo=" + tipo;
+        window.location.href = url; // Redirecionar para a página com base no tipo
+    }
+
+    // Event listener para os itens do menu
+    document.getElementById("categorias").addEventListener("click", function () {
+        redirecionarParaLoja("categorias");
+    });
+
+    document.getElementById("novidades").addEventListener("click", function () {
+        redirecionarParaLoja("novidades");
+    });
+</script>
+
+</html>

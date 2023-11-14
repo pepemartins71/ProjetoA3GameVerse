@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap Javascript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/1c7c4b8991.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navBar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/GameVerse_logo.png" alt="GameVerseLogo" width="100" height="100">GameVerse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample07">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Loja</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="categorias">Categorias</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="novidades">Novidades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suporte.html">Suporte</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav sm-icons">
+                    <li><a class="nav-link" href="login.html"><i class="bi bi-person-circle icon"></i> Login</a></li>
+                    <li><a class="nav-link" href="cadastro.html"><i class="bi bi-pencil-square"></i> Cadastro</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="cadastro">
+        <div class="row">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <div class="card cadastroCard">
+                    <div class="card-header">
+                        <h3 class="cadastro-title">Cadastre-se</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="cadastroForm">
+                            <div class="container">
+                                <label for="nome">Nome:</label>
+                                <input class="col-12" type="text" name="nome" id="nome" placeholder="Nome...">
+                                <br>
+                                <br>
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input class="col-12" type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome...">
+                                <br>
+                                <br>
+                                <label for="genero">Gênero:</label>
+                                <select class="col-12" name="genero" id="genero">
+                                  <option value=""></option>
+                                  <option value="Homem">Homem</option>
+                                  <option value="Mulher">Mulher</option>
+                                  <option value="Outro">Outro</option>
+                                </select>
+                                <br>
+                                <br>
+                                <label for="dataNascimento">Data de Nascimento:</label>
+                                <input class="col-12" type="date" name="dataNascimento" id="dataNascimento">
+                                <br>
+                                <br>
+                                <label for="cadastroEmail">E-mail:</label>
+                                <input class="col-12" type="email" name="cadastroEmail" id="cadastroEmail" placeholder="E-mail...">
+                                <br>
+                                <br>
+                                <label for="cadastroSenha">Senha:</label>
+                                <input class="col-12" type="password" name="cadastroSenha" id="cadastroSenha" placeholder="Senha...">
+                                <br>
+                                <br>
+                                <label for="confirmaSenha">Confirmar Senha:</label>
+                                <input class="col-12" type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Confirmar Senha...">
+                            </div>
+                            <div class="container cadastro-button">
+                                <button style="width: 334px;" type="button" class="btn btn-lg btn-warning" onclick="cadastrarUsuario()">Cadastrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function cadastrarUsuario() {
+        const nome = document.getElementById('nome').value;
+        const sobrenome = document.getElementById('sobrenome').value;
+        const genero = document.getElementById('genero').value;
+        const dataNascimento = document.getElementById('dataNascimento').value;
+        const cadastroEmail = document.getElementById('cadastroEmail').value;
+        const cadastroSenha = document.getElementById('cadastroSenha').value;
+
+        // Recuperar a lista de usuários do localStorage (se existir)
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        const novoUsuario  = {
+            nome,
+            sobrenome,
+            genero,
+            dataNascimento,
+            cadastroEmail,
+            cadastroSenha
+        };
+
+        // Adicionar o novo usuário à lista
+        usuarios.push(novoUsuario);
+
+        // Armazenar o usuário localmente (pode usar LocalStorage ou Cookies)
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        alert('Cadastro realizado com sucesso!');
+
+        // Redirecionar para a página de login
+        window.location.href = 'login.html';
+    }
+
+    // Função para redirecionar com base no item clicado
+    function redirecionarParaLoja(tipo) {
+        var url = "loja.html"; // URL comum para redirecionar
+
+        // Adicionar o tipo de página à URL (listaDesejos, categorias, novidades)
+        url += "?tipo=" + tipo;
+        window.location.href = url; // Redirecionar para a página com base no tipo
+    }
+
+    // Event listener para os itens do menu
+    document.getElementById("categorias").addEventListener("click", function () {
+        redirecionarParaLoja("categorias");
+    });
+
+    document.getElementById("novidades").addEventListener("click", function () {
+        redirecionarParaLoja("novidades");
+    });
+</script>
+
+
+</html>

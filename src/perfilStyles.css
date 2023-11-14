@@ -1,0 +1,168 @@
+body {
+    background-image: linear-gradient(#878787, rgb(73, 71, 71));
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.divisãoHorizontal {
+    border-bottom: 2px solid #000;
+    margin: 10px 0;
+    opacity: 0.5;
+}
+
+/*Navigation Bar*/
+
+.navbar {
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.navBar {
+    background: #1A456C;
+}
+
+/* Lista de Amigos */
+
+.friendList {
+    width: 300px;
+    height: 575px;
+    background-color: #D6DAD6;
+    padding: 30px 30px 30px 30px;
+}
+
+.friendProfiles {
+    max-height: 575px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.pfp {
+    height: 50px;
+    width: 50px;
+}
+
+/*Games*/
+
+#gamePics {
+    width: 623px;
+    height: 425px;
+    margin: 0 auto;
+}
+
+#gamePlaylist {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 12px;
+}
+
+.meusJogos {
+    width: 900px;
+    height: 575px;
+    background-color: #D6DAD6;
+    margin: 0 auto;
+    padding: 50px 50px 50px 50px;
+}
+
+.gameImg {
+    width: 262px;
+    height: 142.391px;
+}
+
+.gameCard {
+    background: #A6AEA6;
+    text-align: center;
+    width: 290px;
+    height: 250px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.gameTitle {
+    margin-top: 16px;
+}
+
+.gameText {
+    width: 215px;
+    margin-left: 35px;
+}
+
+.categoryImg {
+    width: 25px;
+    padding-bottom: 5px;
+}
+
+/*Configurações*/
+
+.configList {
+    width: 300px;
+    height: 575px;
+    background-color: #D6DAD6;
+    padding-top: 1px;
+}
+
+.configList h4 {
+    padding-left: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.configList a {
+    text-decoration: none;
+}
+
+.configGeral {
+    width: 900px;
+    height: 575px;
+    background-color: #D6DAD6;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.configGeral h4 {
+    padding-left: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+/*Audio*/
+
+#audioOpts {
+    padding-left: 40px;
+}
+
+#audioOpts h4 {
+    padding-left: 0px;
+}
+
+#vivaVoz {
+    background: lightgray;
+    width: 800px;
+}

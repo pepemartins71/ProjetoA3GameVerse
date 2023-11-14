@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Suporte</title>
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap Javascript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/1c7c4b8991.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section id="gameNavbar">
+        <nav class="navbar navbar-expand-lg navbar-dark navBar" id="navbarToHide">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/GameVerse_logo.png" alt="GameVerseLogo"
+                        width="100" height="100">GameVerse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample07">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Menu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">Loja</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" id="categorias">Categorias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="novidades">Novidades</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="suporte.html">Suporte</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav sm-icons">
+                        <li><a class="nav-link" href="login.html"><i class="bi bi-person-circle icon"></i> Login</a></li>
+                        <li><a class="nav-link" href="cadastro.html"><i class="bi bi-pencil-square"></i> Cadastro</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <template id="loggedNavbar">
+            <nav class="navbar navbar-expand-lg navbar-dark navBar">
+                <div class="container">
+                    <a class="navbar-brand" href="usuario.html"><img src="images/GameVerse_logo.png" alt="GameVerseLogo"
+                            width="100" height="100">GameVerse</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample07">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="usuario.html">Menu</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Loja</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" id="listaDesejosLogged">Lista de Desejos</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" id="categoriasLogged">Categorias</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" id="novidadesLogged">Novidades</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="suporte.html">Suporte</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav sm-icons">
+                            <li class="nav-item dropdown">
+                                <a id="username" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><i class="bi bi-person-circle icon"></i> Usuário</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="perfil.html" id="perfil">Perfil</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="configuracoes.html"
+                                            id="configuracoes">Configurações</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="index.html" id="logout" onclick="logout()">Sair</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </template>
+    </section>
+
+    <section id="Suporte">
+        <div class="row">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <div class="card SuporteCard">
+                    <div class="card-header">
+                        <h3 class="Suporte-title">Suporte</h3>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="card-body">
+                        <div class="sup-cont">
+                            <label for="financeiro">Financeiro:</label>
+                            <select class="col-sup" name="financeiro" id="financeiro" onchange="showTextInput(this)">
+                                <option value=""></option>
+                                <option value="Pergunta1">Problema com cobrança.</option>
+                                <option value="Pergunta2">Solicitar reembolso.</option>
+                                <option value="Pergunta3">Excluir métodos de pagamento.</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="card-body">
+                        <div class="sup-cont">
+                            <label for="jogos">Jogos:</label>
+                            <select class="col-sup" name="jogos" id="jogos" onchange="showTextInput(this)">
+                                <option value=""></option>
+                                <option value="Pergunta1">Reportar bug.</option>
+                                <option value="Pergunta2">Requisitos de jogo errados.</option>
+                                <option value="Pergunta3">Categoria de jogo indevida.</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="card-body">
+                        <div class="sup-cont">
+                            <label for="conta">Conta:</label>
+                            <select class="col-sup" name="conta" id="conta" onchange="showTextInput(this)">
+                                <option value=""></option>
+                                <option value="Pergunta1">Problema com login/senha.</option>
+                                <option value="Pergunta2">Alguém está se passando por mim.</option>
+                                <option value="Pergunta3">Login indevido na conta.</option>
+                                <option value="Pergunta4">Excluir conta.</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class = "card-body" id="text-input">                    
+                        <label for="text">Digite seu texto (até 300 caracteres):</label>
+                        <br>
+                        <textarea id="text" rows="4" cols="90" maxlength="300"></textarea>
+                    </div>
+                </div>
+            
+                <script>
+                    function showTextInput(select) {
+                        const textInput = document.getElementById('text-input');
+                        const textArea = document.getElementById('text');
+            
+                        // Esconde o campo de texto e reativa todas as caixas de seleção
+                        textInput.style.display = 'none';
+                        const selects = document.querySelectorAll('select');
+                        for (const select of selects) {
+                            select.disabled = false;
+                        }
+            
+                        // Verifica se uma opção foi selecionada
+                        if (select.value !== '') {
+                            // Desativa todas as outras caixas de seleção
+                            for (const otherSelect of selects) {
+                                if (otherSelect !== select) {
+                                    otherSelect.disabled = true;
+                                }
+                            }
+                            // Exibe o campo de texto
+                            textInput.style.display = 'block';
+                        }
+                    }
+                </script>
+                    
+                        <div class="container Suporte-button">
+                            <button onclick="enviarSuporte()" style="width: 334px;" type="button" class="btn btn-lg btn-warning">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbarToHide = document.getElementById("navbarToHide");
+        const template = document.getElementById("loggedNavbar");
+        const gameNavbar = document.getElementById("gameNavbar");
+
+        if (isLoggedIn) {
+            // Se o usuário está logado, oculta a navegação
+            navbarToHide.style.display = "none";
+            // Se o usuário está logado, carrega o conteúdo do template
+            gameNavbar.innerHTML = template.innerHTML;
+
+            // Agora você pode adicionar event listeners para os elementos dentro do template
+            const listaDesejosLogged = gameNavbar.querySelector("#listaDesejosLogged");
+            const categoriasLogged = gameNavbar.querySelector("#categoriasLogged");
+            const novidadesLogged = gameNavbar.querySelector("#novidadesLogged");
+
+            listaDesejosLogged.addEventListener("click", function () {
+                redirecionarParaLoja("listaDesejos");
+            });
+
+            categoriasLogged.addEventListener("click", function () {
+                redirecionarParaLoja("categorias");
+            });
+
+            novidadesLogged.addEventListener("click", function () {
+                redirecionarParaLoja("novidades");
+            });
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtenha o nome e sobrenome do usuário do localStorage
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (isLoggedIn) {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const nome = currentUser.nome;
+        const sobrenome = currentUser.sobrenome;
+
+        // Atualize o texto do link "Usuário" para exibir o nome e sobrenome
+        const linkUsuario = document.getElementById('username');
+        linkUsuario.innerHTML = `<i class="bi bi-person-circle icon"></i> ${nome} ${sobrenome}`;
+        }
+    });
+
+    function logout() {
+        localStorage.setItem("isLoggedIn", "false");
+    }
+
+    // Função para redirecionar com base no item clicado
+    function redirecionarParaLoja(tipo) {
+        var url = "loja.html"; // URL comum para redirecionar
+
+        // Adicionar o tipo de página à URL (listaDesejos, categorias, novidades)
+        url += "?tipo=" + tipo;
+        window.location.href = url; // Redirecionar para a página com base no tipo
+    }
+
+    function enviarSuporte() {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+        if(isLoggedIn){
+            var inputElement = document.getElementById("text");
+            if(inputElement.value === ""){
+                alert('A caixa de texto está vazia!');
+            }else{
+                alert('Suporte acionado com sucesso!');
+
+                window.location.href = 'suporte.html';
+            }
+        }else{
+
+            window.location.href = 'login.html'; 
+        }
+    }
+
+    // Event listener para os itens do menu
+    document.getElementById("categorias").addEventListener("click", function () {
+        redirecionarParaLoja("categorias");
+    });
+
+    document.getElementById("novidades").addEventListener("click", function () {
+        redirecionarParaLoja("novidades");
+    });
+</script>
+
+</html>
